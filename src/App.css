@@ -1,38 +1,18 @@
-.App {
-  text-align: center;
+.App{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    min-height: fit-content;
+    min-width: fit-content;
+    background-size: cover;
+    opacity:1;
+    color: white;
+    background-image: url("https://e0.pxfuel.com/wallpapers/105/984/desktop-wallpaper-gmail-carbon-logo-grunge-art-carbon-background-creative-gmail-black-logo-brands-gmail-logo-gmail.jpg");
+    opacity: 1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.sidebar__body{
+    display: grid;
+    grid-template-columns: 250px auto 20px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

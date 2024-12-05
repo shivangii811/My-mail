@@ -1,0 +1,24 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .compose__btn{
+    padding: 10px !important;
+    border-radius: 40px !important;
+    box-shadow: 2px rgb(224, 221, 221);
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+    max-width: 150px;
+    
+  }
+
+  .compose__btn :hover{
+    background-color: rgb(243, 241, 237);
+    opacity: 1;
+  }
+  
+  
+  

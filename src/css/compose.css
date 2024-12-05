@@ -1,0 +1,100 @@
+.compose{
+    position: absolute;
+    bottom: 0;
+    right: 70px;
+    min-width: 500px;
+    border-radius: 10px 10px 0px 0px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px whitesmoke;
+    color: black;
+    background-color: white;
+}
+
+.compose .compose__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 7px 15px;
+}
+
+.compose__header__right{
+    display: flex;
+    align-items: center;
+
+}
+
+.compose__header__right svg{
+    font-size: 18px;
+    margin: 5px;
+    padding: 3px;
+}
+
+.compose__header__right svg:hover{
+    background: #545454;
+    cursor: pointer;
+}
+
+.compose__body{
+    display: block;
+    border: 0;
+    outline: 0;
+}
+
+.compose__bodyForm{
+    display: flex;
+    flex-direction: column;
+}
+
+.compose__bodyForm input, textarea{
+    height: 40px;
+    outline: 0;
+    border: 0px;
+    box-shadow: 2px 2px 4px grey;
+    padding: 0px 10px;
+}
+
+.compose__bodyForm textarea{
+    height: auto;
+}
+
+.compose__footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 10px;
+}
+
+.compose__footerLeft button{
+    display: flex;
+    align-items: center;
+    background-color: #297be2;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 0px;
+    outline: 0;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.compose__footerLeft button svg{
+    border-left: 1px solid #00000052;
+    margin-left: 15px;
+    padding: 6px 2px 6px 2px;
+}
+
+.compose__footerRight svg{
+    font-size: 20px;
+    margin-left: 10px;
+    border-radius: 3px;
+    color: grey;
+    transition: 0.2 linear 0s;
+    cursor: pointer;
+}
+
+.compose__footerRight svg:hover{
+    background-color: whitesmoke;
+    color: black;
+}
