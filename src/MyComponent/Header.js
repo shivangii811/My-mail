@@ -6,8 +6,11 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import SettingsIcon from '@mui/icons-material/Settings';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import '../css/header.css';
+import { useSelector } from 'react-redux';
+import { selectUser } from '../redux/userSlice';
 
 const Header = () => {
+  const user = useSelector(selectUser)
   return (
     <div className='header'>
         <div className='header__left'>

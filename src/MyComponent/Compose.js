@@ -29,8 +29,8 @@ const Compose = () => {
     if(subject===""){
       return alert("Subject is required")
     }
+    db.collection("emails").add({
 
-    await addDoc(collection(db, "emails"),{
       to,
       subject,
       message,
