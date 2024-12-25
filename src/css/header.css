@@ -14,9 +14,13 @@
     display: grid;
     grid-template-columns: 50% 50%;
   }
-  .custom-icon-button {
-    color: whitesmoke;
-  }
+    .header__left .custom-icon-button {
+      color: whitesmoke !important;
+    }
+    
+    .header__right .custom-icon-button {
+      color: whitesmoke !important; 
+    }
   
   .custom-icon-button:hover {
     color: grey;

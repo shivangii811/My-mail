@@ -1,7 +1,7 @@
-import firebase from "firebase/compat/app";
 import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore';
-import { getAuth, GoogleAuthProvider, signInWithPopup} from "firebase/auth"; 
+import { getAuth, GoogleAuthProvider} from "firebase/auth"; 
+import { collection, getDocs } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -22,15 +22,10 @@ const db = getFirestore(firebaseApp);
 const auth = getAuth(firebaseApp);
 
 const provider = new GoogleAuthProvider();
-signInWithPopup(auth, provider)
-  .then((result) => {
-    // User signed in
-    const user = result.user;
-    console.log(user);
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    console.log(errorCode, errorMessage);
-  });
+
+const querySnapshot = await getDocs(collection(db, "your-collection-name"));
+querySnapshot.forEach((doc) => {
+  console.log(doc.id, " => ", doc.data());
+});
+
 export {db , auth, provider}

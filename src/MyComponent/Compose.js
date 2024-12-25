@@ -10,9 +10,9 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import '../css/compose.css'
 import { useDispatch } from 'react-redux';
 import { closeSendMsg } from '../redux/mailSlice';
-import { collection, addDoc, serverTimestamp } from "firebase/firestore"; 
+import { addDoc, collection, serverTimestamp } from "firebase/firestore"; 
 import { db} from '../firebase';
-import firebase from 'firebase/compat/app';
+// import firebase from 'firebase/compat/app';
 
 const Compose = () => {
   const [to, setTo] = useState("");
@@ -28,8 +28,9 @@ const Compose = () => {
     }
     if(subject===""){
       return alert("Subject is required")
-    }
-    db.collection("emails").add({
+    } 
+    try{
+    await addDoc(collection(db, "emails"),{
 
       to,
       subject,
@@ -41,7 +42,11 @@ const Compose = () => {
     setMessage("");
     alert("Email sent successfully!");
     dispatch(closeSendMsg());
-  } 
+  } catch (error) {
+    console.error("Error sending email: ", error);
+    alert("Failed to send email. Please try again.");
+  }
+};
 
    return (
     <div className='compose'>

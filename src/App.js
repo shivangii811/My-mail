@@ -3,23 +3,27 @@ import { useSelector } from 'react-redux'
 import Header from './MyComponent/Header'
 import Sidebar from './MyComponent/Sidebar'
 // import { userSelector } from 'react-redux'
+import { selectUser } from './redux/userSlice'
 import EmailView from './MyComponent/EmailView'
 import { selectSendMsgIsOpen } from './redux/mailSlice'
 import Compose from './MyComponent/Compose'
 import './app.css'
-import { Login } from '@mui/icons-material'
+import Login from './MyComponent/Login'
 import {
   BrowserRouter as Router,
   // Switch,
   // Route
 } from "react-router-dom"
-import { selectUser } from './redux/userSlice'
+// import { selectUser } from './redux/userSlice'
 
 const App = () => {
   const isMsgOpen =useSelector(selectSendMsgIsOpen);
-
-  const user = null;
   console.log(isMsgOpen);
+
+  const user = useSelector(selectUser);
+  console.log(user); // Check if user data is available
+
+  
   return (
     <Router>
      {user && (
